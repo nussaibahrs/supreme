@@ -11,8 +11,8 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -32,7 +32,7 @@
 
 <meta property="og:title" content="Read a YAML file containing model — src_yaml" />
 
-<meta property="og:description" content="Read a YAML file containing model" />
+<meta property="og:description" content="Reads an object or a file in YAML format and returns a model YAML object." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -119,7 +119,7 @@
 
     <div class="ref-description">
     
-    <p>Read a YAML file containing model</p>
+    <p>Reads an object or a file in YAML format and returns a model YAML object.</p>
     
     </div>
 
@@ -141,9 +141,11 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='co'>## Read from file:</span>
 <span class='no'>file</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/file.path'>file.path</a></span>(<span class='st'>"yaml-test"</span>, <span class='st'>"example-model-1.yaml"</span>)
 <span class='fu'>src_yaml</span>(<span class='no'>file</span>)
 
+<span class='co'>## Read from text object:</span>
 <span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='st'>"
 - type: module
   name: childModuleA
