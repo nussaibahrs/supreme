@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Getting started with supreme • supreme</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Getting started with supreme">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
@@ -73,6 +74,7 @@
 <!--/.navbar -->
 
       
+
       </header><script src="getting-started_files/htmlwidgets-1.3/htmlwidgets.js"></script><script src="getting-started_files/dagre-0.0.1/dagre.min.js"></script><script src="getting-started_files/lodash-3.7.0/lodash.js"></script><script src="getting-started_files/nomnoml-0.2.0/nomnoml.js"></script><script src="getting-started_files/nomnoml-binding-0.1.0/nomnoml.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
@@ -105,8 +107,8 @@
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">s &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_file.html">src_file</a></span>(paths))</a></code></pre></div>
 <p>Visualize:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/graph.html">graph</a></span>(s)</a></code></pre></div>
-<div id="htmlwidget-ceeebfd05fe3de7fd7aa" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ceeebfd05fe3de7fd7aa">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.serverqelfogwjzb: fill=#fff\n[<serverqelfogwjzb>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.customerstabmoduleserverjxzrogmpsq: fill=#fff\n[<customerstabmoduleserverjxzrogmpsq>customers_tab_module_server||main_table_server()]\n[customers_tab_module_server]->[main_table_server]\n#.itemstabmoduleserveroatlwunxvs: fill=#fff\n[<itemstabmoduleserveroatlwunxvs>items_tab_module_server||main_table_server(); items_plot_server()]\n[items_tab_module_server]->[main_table_server]\n[items_tab_module_server]->[items_plot_server]\n#.itemsplotserverwozbgfjnvr: fill=#fff\n[<itemsplotserverwozbgfjnvr>items_plot_server||]\n\n#.transactionstabmoduleserverlsovtzmkyr: fill=#fff\n[<transactionstabmoduleserverlsovtzmkyr>transactions_tab_module_server||main_table_server()]\n[transactions_tab_module_server]->[main_table_server]\n#.maintableserveryxqjfbstvw: fill=#fff\n[<maintableserveryxqjfbstvw>main_table_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script><p>Those all can be also done using pipes (<code>%&gt;%</code>) from the <a href="https://cran.r-project.org/package=magrittr">magrittr</a> package:</p>
+<div id="htmlwidget-18ed6960eaacdf5f2351" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-18ed6960eaacdf5f2351">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.servereqvfskhxpg: fill=#fff\n[<servereqvfskhxpg>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.customerstabmoduleserverfikprtzbwa: fill=#fff\n[<customerstabmoduleserverfikprtzbwa>customers_tab_module_server||main_table_server()]\n[customers_tab_module_server]->[main_table_server]\n#.itemstabmoduleservergvejdimbqx: fill=#fff\n[<itemstabmoduleservergvejdimbqx>items_tab_module_server||main_table_server(); items_plot_server()]\n[items_tab_module_server]->[main_table_server]\n[items_tab_module_server]->[items_plot_server]\n#.itemsplotservereflhumjgxa: fill=#fff\n[<itemsplotservereflhumjgxa>items_plot_server||]\n\n#.transactionstabmoduleserversjzoyepriw: fill=#fff\n[<transactionstabmoduleserversjzoyepriw>transactions_tab_module_server||main_table_server()]\n[transactions_tab_module_server]->[main_table_server]\n#.maintableserverxkoeytqjfm: fill=#fff\n[<maintableserverxkoeytqjfm>main_table_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script><p>Those all can be also done using pipes (<code>%&gt;%</code>) from the <a href="https://cran.r-project.org/package=magrittr">magrittr</a> package:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/src_file.html">src_file</a></span>(paths) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="../reference/graph.html">graph</a></span>()</a></code></pre></div>
@@ -118,9 +120,9 @@
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">pkg.name &lt;-<span class="st"> </span><span class="kw"><a href="../reference/example_package.html">example_package</a></span>()</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#&gt; Downloading GitHub repo strboul/supreme.pkg.test@master</span></a>
 <a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt;   </span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">   checking <span class="cf">for</span> file ‘<span class="op">/</span>tmp<span class="op">/</span>RtmpKOBsGu<span class="op">/</span>remotes37fa664e06d1<span class="op">/</span>strboul<span class="op">-</span>supreme.pkg.test<span class="op">-</span>ae4bc89<span class="op">/</span>DESCRIPTION’ ...</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">   checking <span class="cf">for</span> file ‘<span class="op">/</span>tmp<span class="op">/</span>Rtmp3XpUHP<span class="op">/</span>remotes3ae26cd7424f<span class="op">/</span>strboul<span class="op">-</span>supreme.pkg.test<span class="op">-</span>ae4bc89<span class="op">/</span>DESCRIPTION’ ...</a>
 <a class="sourceLine" id="cb5-5" data-line-number="5">  </a>
-<a class="sourceLine" id="cb5-6" data-line-number="6">✔  checking <span class="cf">for</span> file ‘<span class="op">/</span>tmp<span class="op">/</span>RtmpKOBsGu<span class="op">/</span>remotes37fa664e06d1<span class="op">/</span>strboul<span class="op">-</span>supreme.pkg.test<span class="op">-</span>ae4bc89<span class="op">/</span>DESCRIPTION’</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">✔  checking <span class="cf">for</span> file ‘<span class="op">/</span>tmp<span class="op">/</span>Rtmp3XpUHP<span class="op">/</span>remotes3ae26cd7424f<span class="op">/</span>strboul<span class="op">-</span>supreme.pkg.test<span class="op">-</span>ae4bc89<span class="op">/</span>DESCRIPTION’</a>
 <a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt; </span></a>
 <a class="sourceLine" id="cb5-8" data-line-number="8">  </a>
 <a class="sourceLine" id="cb5-9" data-line-number="9">─  preparing ‘supreme.pkg.test’<span class="op">:</span></a>
@@ -146,50 +148,50 @@
 <a class="sourceLine" id="cb5-29" data-line-number="29"><span class="co">#&gt; (as 'lib' is unspecified)</span></a>
 <a class="sourceLine" id="cb5-30" data-line-number="30">sup &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_pkg.html">src_pkg</a></span>(pkg.name))</a>
 <a class="sourceLine" id="cb5-31" data-line-number="31"><span class="kw"><a href="../reference/graph.html">graph</a></span>(sup)</a></code></pre></div>
-<div id="htmlwidget-28cb3e0f46cb19ef20eb" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-28cb3e0f46cb19ef20eb">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.dotmoduleserverzpalirhcmq: fill=#fff\n[<dotmoduleserverzpalirhcmq>.dotModule1_server||]\n\n#.dotmoduleserverwthapujbkf: fill=#fff\n[<dotmoduleserverwthapujbkf>.dotModule2_server||]\n\n#.amodulefortableserverzdxqenamic: fill=#fff\n[<amodulefortableserverzdxqenamic>a_module_for_table_server||]\n\n#.childmoduleserverbqinjumsrg: fill=#fff\n[<childmoduleserverbqinjumsrg>childModule1_server||]\n\n#.moduleaserveranvubrjwgh: fill=#fff\n[<moduleaserveranvubrjwgh>moduleA_server||]\n\n#.modulebserverqtfuepkvbc: fill=#fff\n[<modulebserverqtfuepkvbc>moduleB_server||childModule1_server()]\n[moduleB_server]->[childModule1_server]\n#.servervncigyxqed: fill=#fff\n[<servervncigyxqed>server||moduleA_server(); moduleB_server()]\n[server]->[moduleA_server]\n[server]->[moduleB_server]","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a2ac3f3a20ad1d1d95ce" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a2ac3f3a20ad1d1d95ce">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.dotmoduleservervozhtdaxjw: fill=#fff\n[<dotmoduleservervozhtdaxjw>.dotModule1_server||]\n\n#.dotmoduleserverqzocnjmafl: fill=#fff\n[<dotmoduleserverqzocnjmafl>.dotModule2_server||]\n\n#.amodulefortableserverasmuzhlpvw: fill=#fff\n[<amodulefortableserverasmuzhlpvw>a_module_for_table_server||]\n\n#.childmoduleserverlfunamxvpk: fill=#fff\n[<childmoduleserverlfunamxvpk>childModule1_server||]\n\n#.moduleaserverbvgwjuqlzy: fill=#fff\n[<moduleaserverbvgwjuqlzy>moduleA_server||]\n\n#.modulebservermhznojgsbq: fill=#fff\n[<modulebservermhznojgsbq>moduleB_server||childModule1_server()]\n[moduleB_server]->[childModule1_server]\n#.serverlguhvzyeib: fill=#fff\n[<serverlguhvzyeib>server||moduleA_server(); moduleB_server()]\n[server]->[moduleA_server]\n[server]->[moduleB_server]","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="read-expressions-containing-application" class="section level3">
 <h3 class="hasAnchor">
 <a href="#read-expressions-containing-application" class="anchor"></a>Read expressions containing application</h3>
 <p>Create a new expression in R, and you will be able to analyze it by creating a supreme object:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">e &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/expression">expression</a></span>({</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(shiny)</a>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">e &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/expression.html">expression</a></span>({</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(shiny)</a>
 <a class="sourceLine" id="cb6-3" data-line-number="3">  </a>
 <a class="sourceLine" id="cb6-4" data-line-number="4">  text_ui &lt;-<span class="st"> </span><span class="cf">function</span>(id) {</a>
-<a class="sourceLine" id="cb6-5" data-line-number="5">    ns &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/NS">NS</a></span>(id)</a>
-<a class="sourceLine" id="cb6-6" data-line-number="6">    <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/tag">tagList</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/textInput">textInput</a></span>(<span class="kw">ns</span>(<span class="st">"text"</span>), <span class="st">"Write here"</span>),</a>
-<a class="sourceLine" id="cb6-7" data-line-number="7">            <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/verbatimTextOutput">verbatimTextOutput</a></span>(<span class="kw">ns</span>(<span class="st">"display"</span>)))</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">    ns &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/shiny/man/NS.html">NS</a></span>(id)</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">    <span class="kw"><a href="https://rdrr.io/pkg/shiny/man/tag.html">tagList</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/shiny/man/textInput.html">textInput</a></span>(<span class="kw">ns</span>(<span class="st">"text"</span>), <span class="st">"Write here"</span>),</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7">            <span class="kw"><a href="https://rdrr.io/pkg/shiny/man/verbatimTextOutput.html">verbatimTextOutput</a></span>(<span class="kw">ns</span>(<span class="st">"display"</span>)))</a>
 <a class="sourceLine" id="cb6-8" data-line-number="8">  }</a>
 <a class="sourceLine" id="cb6-9" data-line-number="9">  </a>
 <a class="sourceLine" id="cb6-10" data-line-number="10">  text_server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
-<a class="sourceLine" id="cb6-11" data-line-number="11">    rv.text &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/reactiveValues">reactiveValues</a></span>(<span class="dt">val =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb6-11" data-line-number="11">    rv.text &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/shiny/man/reactiveValues.html">reactiveValues</a></span>(<span class="dt">val =</span> <span class="ot">FALSE</span>)</a>
 <a class="sourceLine" id="cb6-12" data-line-number="12">    </a>
-<a class="sourceLine" id="cb6-13" data-line-number="13">    <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/observeEvent">observeEvent</a></span>(input<span class="op">$</span>text, {</a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">    <span class="kw"><a href="https://rdrr.io/pkg/shiny/man/observeEvent.html">observeEvent</a></span>(input<span class="op">$</span>text, {</a>
 <a class="sourceLine" id="cb6-14" data-line-number="14">      rv.text<span class="op">$</span>val &lt;-<span class="st"> </span>input<span class="op">$</span>text</a>
 <a class="sourceLine" id="cb6-15" data-line-number="15">    })</a>
 <a class="sourceLine" id="cb6-16" data-line-number="16">    </a>
-<a class="sourceLine" id="cb6-17" data-line-number="17">    output<span class="op">$</span>display &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/renderText">renderText</a></span>({</a>
+<a class="sourceLine" id="cb6-17" data-line-number="17">    output<span class="op">$</span>display &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/shiny/man/renderText.html">renderText</a></span>({</a>
 <a class="sourceLine" id="cb6-18" data-line-number="18">      rv.text<span class="op">$</span>val</a>
 <a class="sourceLine" id="cb6-19" data-line-number="19">    })</a>
 <a class="sourceLine" id="cb6-20" data-line-number="20">    </a>
 <a class="sourceLine" id="cb6-21" data-line-number="21">  }</a>
 <a class="sourceLine" id="cb6-22" data-line-number="22">  </a>
-<a class="sourceLine" id="cb6-23" data-line-number="23">  ui &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/fluidPage">fluidPage</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/fluidPage">fluidRow</a></span>(</a>
-<a class="sourceLine" id="cb6-24" data-line-number="24">    <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/column">column</a></span>(<span class="dv">6</span>,</a>
+<a class="sourceLine" id="cb6-23" data-line-number="23">  ui &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidPage</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidRow</a></span>(</a>
+<a class="sourceLine" id="cb6-24" data-line-number="24">    <span class="kw"><a href="https://rdrr.io/pkg/shiny/man/column.html">column</a></span>(<span class="dv">6</span>,</a>
 <a class="sourceLine" id="cb6-25" data-line-number="25">           <span class="kw">text_ui</span>(<span class="st">"text"</span>))</a>
 <a class="sourceLine" id="cb6-26" data-line-number="26">  ))</a>
 <a class="sourceLine" id="cb6-27" data-line-number="27">  </a>
 <a class="sourceLine" id="cb6-28" data-line-number="28">  server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
-<a class="sourceLine" id="cb6-29" data-line-number="29">    <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/callModule">callModule</a></span>(<span class="dt">module =</span> text_server, <span class="dt">id =</span> <span class="st">"text"</span>)</a>
+<a class="sourceLine" id="cb6-29" data-line-number="29">    <span class="kw"><a href="https://rdrr.io/pkg/shiny/man/callModule.html">callModule</a></span>(<span class="dt">module =</span> text_server, <span class="dt">id =</span> <span class="st">"text"</span>)</a>
 <a class="sourceLine" id="cb6-30" data-line-number="30">  }</a>
 <a class="sourceLine" id="cb6-31" data-line-number="31">  </a>
-<a class="sourceLine" id="cb6-32" data-line-number="32">  <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/shinyApp">shinyApp</a></span>(ui, server)</a>
+<a class="sourceLine" id="cb6-32" data-line-number="32">  <span class="kw"><a href="https://rdrr.io/pkg/shiny/man/shinyApp.html">shinyApp</a></span>(ui, server)</a>
 <a class="sourceLine" id="cb6-33" data-line-number="33">})</a>
 <a class="sourceLine" id="cb6-34" data-line-number="34">s &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_expr.html">src_expr</a></span>(e))</a>
 <a class="sourceLine" id="cb6-35" data-line-number="35"><span class="kw"><a href="../reference/graph.html">graph</a></span>(s)</a></code></pre></div>
-<div id="htmlwidget-48f63711679d420c5693" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-48f63711679d420c5693">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.textserveramvozpcyej: fill=#fff\n[<textserveramvozpcyej>text_server||]\n\n#.serverketgvrxyun: fill=#fff\n[<serverketgvrxyun>server||text_server()]\n[server]->[text_server]","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fbdcd5a793e3803ce0a9" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fbdcd5a793e3803ce0a9">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.textserverakqysxmrue: fill=#fff\n[<textserverakqysxmrue>text_server||]\n\n#.serverkzayrvgemh: fill=#fff\n[<serverkzayrvgemh>server||text_server()]\n[server]->[text_server]","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="read-application-environment" class="section level3">
 <h3 class="hasAnchor">
@@ -197,8 +199,8 @@
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">e &lt;-<span class="st"> </span><span class="kw"><a href="../reference/example_environment.html">example_environment</a></span>()</a>
 <a class="sourceLine" id="cb7-2" data-line-number="2">s &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_env.html">src_env</a></span>(e))</a>
 <a class="sourceLine" id="cb7-3" data-line-number="3"><span class="kw"><a href="../reference/graph.html">graph</a></span>(s)</a></code></pre></div>
-<div id="htmlwidget-785036d3a7a08f74a91e" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-785036d3a7a08f74a91e">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.moduleserveroyhksezbiu: fill=#fff\n[<moduleserveroyhksezbiu>module1_server||]\n\n#.moduleserverrqozuleckf: fill=#fff\n[<moduleserverrqozuleckf>module2_server||]\n\n#.moduleserverewrdmfqjot: fill=#fff\n[<moduleserverewrdmfqjot>module3_server||]\n\n#.moduleaservercifrezaoxh: fill=#fff\n[<moduleaservercifrezaoxh>moduleA_server||module1_server(); module2_server(); module3_server()]\n[moduleA_server]->[module1_server]\n[moduleA_server]->[module2_server]\n[moduleA_server]->[module3_server]\n#.serverrlpadebufj: fill=#fff\n[<serverrlpadebufj>server||moduleA_server()]\n[server]->[moduleA_server]","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-473070ba0ec26da99cac" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-473070ba0ec26da99cac">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.moduleservermxdfijkros: fill=#fff\n[<moduleservermxdfijkros>module1_server||]\n\n#.moduleserverdaevzbfthm: fill=#fff\n[<moduleserverdaevzbfthm>module2_server||]\n\n#.moduleserverolzvfrjetq: fill=#fff\n[<moduleserverolzvfrjetq>module3_server||]\n\n#.moduleaserveraowbkrieyh: fill=#fff\n[<moduleaserveraowbkrieyh>moduleA_server||module1_server(); module2_server(); module3_server()]\n[moduleA_server]->[module1_server]\n[moduleA_server]->[module2_server]\n[moduleA_server]->[module3_server]\n#.serverripowkesnb: fill=#fff\n[<serverripowkesnb>server||moduleA_server()]\n[server]->[moduleA_server]","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="analyse-existing-applications" class="section level2">
@@ -237,8 +239,8 @@
 <a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt; 4 entities: server, items_tab_module_server, customers_tab_module_server, transactions_tab_module_server</span></a></code></pre></div>
 <p>Visualize the supreme mode object:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="../reference/graph.html">graph</a></span>(obj)</a></code></pre></div>
-<div id="htmlwidget-34bd59de41aa6519bb23" style="width:100%;height:672px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-34bd59de41aa6519bb23">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.serverwbnxvajmzs: fill=#fff\n[<serverwbnxvajmzs>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.itemstabmoduleserverpahyslbjte: fill=#fff\n[<itemstabmoduleserverpahyslbjte>items_tab_module_server||]\n\n#.customerstabmoduleserverfnpahokeld: fill=#fff\n[<customerstabmoduleserverfnpahokeld>customers_tab_module_server||]\n\n#.transactionstabmoduleserverofrhxmnwac: fill=#fff\n[<transactionstabmoduleserverofrhxmnwac>transactions_tab_module_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5cb4407da5df0b405b92" style="width:100%;height:672px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5cb4407da5df0b405b92">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.serverxdjvhimaro: fill=#fff\n[<serverxdjvhimaro>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.itemstabmoduleserverfxzistvear: fill=#fff\n[<itemstabmoduleserverfxzistvear>items_tab_module_server||]\n\n#.customerstabmoduleserverptandekqhs: fill=#fff\n[<customerstabmoduleserverptandekqhs>customers_tab_module_server||]\n\n#.transactionstabmoduleserverpeloaviumf: fill=#fff\n[<transactionstabmoduleserverpeloaviumf>transactions_tab_module_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="model-language" class="section level2">
@@ -247,14 +249,14 @@
 <p>A <em>supreme</em> object is consisted by <em>entities</em>. An ‘<em>entity</em>’ denotes here a Shiny server component that could either be a server side of a module or the main <code>server</code> function of a Shiny application.</p>
 <p><em>supreme</em> objects can be created with YAML with the following structure<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>:</p>
 <ol style="list-style-type: decimal">
-<li><p>Create an <em>entity</em> by using list members that are denoted by a leading hyphen (<code>-</code>).</p></li>
+<li><p>Create an <em>entity</em> by using list members that are denoted by a leading hyphen (<code><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></code>).</p></li>
 <li><p>Each entity can have the following fields. The <code>type</code> and <code>name</code> fields are absolute must to generate a <code>supreme</code> object. Other fields are optional, but they enhance <code>supreme</code> objects.</p></li>
 </ol>
 <p>2.1. <code>type</code> <em>(required)</em>: This should be straightforward “module” for now. The possible entries, which this field can take, may be changed in the future.</p>
 <p>2.2. <code>name</code> <em>(required)</em>: The name of the entity.</p>
 <p>2.3. <code>input</code> <em>(optional)</em>: Input names which an entity can take. (If you have names of a length greater than one, put them between square brackets (<code>[ ]</code>) whose entries are delimited by commas.)</p>
 <p>2.4. <code>output</code> <em>(optional)</em>: Output names which an entity can take. (This is under development)</p>
-<p>2.5. <code>calling_modules</code> <em>(optional)</em>: The names of the modules are called from that entity via <code><a href="https://www.rdocumentation.org/packages/shiny/topics/callModule">callModule()</a></code> call.</p>
+<p>2.5. <code>calling_modules</code> <em>(optional)</em>: The names of the modules are called from that entity via <code><a href="https://rdrr.io/pkg/shiny/man/callModule.html">callModule()</a></code> call.</p>
 <p>2.6. <code>src</code> <em>(optional)</em>: A single location where the read resources (file paths, package name etc.) can be found.</p>
 </div>
 <div id="current-limitations" class="section level2">
@@ -262,7 +264,7 @@
 <a href="#current-limitations" class="anchor"></a>Current limitations</h2>
 <ul>
 <li><p>Although it’s possible to create a Shiny app by only providing <code>input</code> and <code>output</code> arguments in the server side, <em>supreme</em> will not read any Shiny server side component missing a <code>session</code> argument<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p></li>
-<li><p><em>supreme</em> will not properly parse the source code of your application if server side component is created with <code><a href="https://www.rdocumentation.org/packages/shiny/topics/shinyServer">shinyServer()</a></code>, which is kind of soft-deprecated after a very early Shiny version <code>0.10</code>, because of the reason mentioned just above.</p></li>
+<li><p><em>supreme</em> will not properly parse the source code of your application if server side component is created with <code><a href="https://rdrr.io/pkg/shiny/man/shinyServer.html">shinyServer()</a></code>, which is kind of soft-deprecated after a very early Shiny version <code>0.10</code>, because of the reason mentioned just above.</p></li>
 <li><p>Some idiocratic Shiny application code may not be parsed as intended. It would be great if you can open an issue with a reproducible example.</p></li>
 </ul>
 </div>
@@ -281,6 +283,7 @@
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -297,17 +300,20 @@
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by Metin Yazici.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>
