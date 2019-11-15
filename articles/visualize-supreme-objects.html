@@ -75,7 +75,7 @@
 
       
 
-      </header><script src="visualize-supreme-objects_files/htmlwidgets-1.3/htmlwidgets.js"></script><script src="visualize-supreme-objects_files/dagre-0.0.1/dagre.min.js"></script><script src="visualize-supreme-objects_files/lodash-3.7.0/lodash.js"></script><script src="visualize-supreme-objects_files/nomnoml-0.2.0/nomnoml.js"></script><script src="visualize-supreme-objects_files/nomnoml-binding-0.1.0/nomnoml.js"></script><div class="row">
+      </header><script src="visualize-supreme-objects_files/htmlwidgets-1.5.1/htmlwidgets.js"></script><script src="visualize-supreme-objects_files/dagre-0.0.1/dagre.min.js"></script><script src="visualize-supreme-objects_files/lodash-3.7.0/lodash.js"></script><script src="visualize-supreme-objects_files/nomnoml-0.2.0/nomnoml.js"></script><script src="visualize-supreme-objects_files/nomnoml-binding-0.1.0/nomnoml.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Visualize ‘supreme’ objects</h1>
@@ -91,13 +91,14 @@
 <p>This vignette is about styling graphs created from supreme objects.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">paths &lt;-<span class="st"> </span><span class="kw"><a href="../reference/example_app_path.html">example_app_path</a></span>()</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2">s &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_file.html">src_file</a></span>(paths))</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">s</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#&gt; A supreme model object</span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt; 6 entities: server, customers_tab_module_server, items_tab_module_server, items_plot_server, ...</span></a></code></pre></div>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt; Warning: 0 (zero) entities found in the source.</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">s</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt; A supreme model object</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt; 0 entity:</span></a></code></pre></div>
 <p>Create entity-relationship diagram:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/graph.html">graph</a></span>(s)</a></code></pre></div>
-<div id="htmlwidget-56e84e7791456462d73e" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-56e84e7791456462d73e">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.serverixtcyohmgr: fill=#fff\n[<serverixtcyohmgr>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.customerstabmoduleserveramnqgdjkiy: fill=#fff\n[<customerstabmoduleserveramnqgdjkiy>customers_tab_module_server||main_table_server()]\n[customers_tab_module_server]->[main_table_server]\n#.itemstabmoduleservernakplmbcti: fill=#fff\n[<itemstabmoduleservernakplmbcti>items_tab_module_server||main_table_server(); items_plot_server()]\n[items_tab_module_server]->[main_table_server]\n[items_tab_module_server]->[items_plot_server]\n#.itemsplotserverxdwbftzvhn: fill=#fff\n[<itemsplotserverxdwbftzvhn>items_plot_server||]\n\n#.transactionstabmoduleserverbscedfarin: fill=#fff\n[<transactionstabmoduleserverbscedfarin>transactions_tab_module_server||main_table_server()]\n[transactions_tab_module_server]->[main_table_server]\n#.maintableserveruayzoqtxce: fill=#fff\n[<maintableserveruayzoqtxce>main_table_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script><p>Style graph:</p>
+<div id="htmlwidget-4daa7b4c748384862bf1" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4daa7b4c748384862bf1">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n","svg":false},"evals":[],"jsHooks":[]}</script><p>Style graph:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># graph(s, style = list(name = "server", fill = "#ff0", linetype = "dashed"))</span></a></code></pre></div>
 <p>Example: Style modules whose name ending with ‘slider’:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co">#s_df &lt;- as.data.frame(s) # turn supreme object to data.frame</span></a>
@@ -112,9 +113,10 @@
 <a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co"># )</span></a></code></pre></div>
 <p>You can also use <code>%&gt;%</code> pipes from the <a href="https://cran.r-project.org/package=magrittr">magrittr</a> package:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_file.html">src_file</a></span>(paths)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="../reference/graph.html">graph</a></span>()</a></code></pre></div>
-<div id="htmlwidget-57d57855358e4cbaaedb" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-57d57855358e4cbaaedb">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.serverwiorfecxms: fill=#fff\n[<serverwiorfecxms>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.customerstabmoduleserverobnrwcfspu: fill=#fff\n[<customerstabmoduleserverobnrwcfspu>customers_tab_module_server||main_table_server()]\n[customers_tab_module_server]->[main_table_server]\n#.itemstabmoduleserverpezrioshbv: fill=#fff\n[<itemstabmoduleserverpezrioshbv>items_tab_module_server||main_table_server(); items_plot_server()]\n[items_tab_module_server]->[main_table_server]\n[items_tab_module_server]->[items_plot_server]\n#.itemsplotserverlypjtngsrk: fill=#fff\n[<itemsplotserverlypjtngsrk>items_plot_server||]\n\n#.transactionstabmoduleserverowrkdtqbmc: fill=#fff\n[<transactionstabmoduleserverowrkdtqbmc>transactions_tab_module_server||main_table_server()]\n[transactions_tab_module_server]->[main_table_server]\n#.maintableserverjrkuzipcly: fill=#fff\n[<maintableserverjrkuzipcly>main_table_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="../reference/graph.html">graph</a></span>()</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co">#&gt; Warning: 0 (zero) entities found in the source.</span></a></code></pre></div>
+<div id="htmlwidget-1877fde11a46de2bf5a5" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1877fde11a46de2bf5a5">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
