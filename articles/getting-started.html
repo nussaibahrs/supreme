@@ -102,10 +102,9 @@
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">paths &lt;-<span class="st"> </span><span class="kw"><a href="../reference/example_app_path.html">example_app_path</a></span>()</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2">s &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_file.html">src_file</a></span>(paths))</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt; Warning: 0 (zero) entities found in the source.</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw"><a href="../reference/graph.html">graph</a></span>(s)</a></code></pre></div>
-<div id="htmlwidget-3b98c3182db568e8063b" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3b98c3182db568e8063b">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n","svg":false},"evals":[],"jsHooks":[]}</script><p>Those all can be also done using pipes (<code>%&gt;%</code>) from the <a href="https://cran.r-project.org/package=magrittr">magrittr</a> package:</p>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw"><a href="../reference/graph.html">graph</a></span>(s)</a></code></pre></div>
+<div id="htmlwidget-6660b0e28c25474a2d8e" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6660b0e28c25474a2d8e">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.servergwhemifyno: fill=#fff\n[<servergwhemifyno>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.customerstabmoduleserverifclxpqoth: fill=#fff\n[<customerstabmoduleserverifclxpqoth>customers_tab_module_server||main_table_server()]\n[customers_tab_module_server]->[main_table_server]\n#.itemstabmoduleservercdfatvbyrh: fill=#fff\n[<itemstabmoduleservercdfatvbyrh>items_tab_module_server||main_table_server(); items_plot_server()]\n[items_tab_module_server]->[main_table_server]\n[items_tab_module_server]->[items_plot_server]\n#.itemsplotserverslaxveydkm: fill=#fff\n[<itemsplotserverslaxveydkm>items_plot_server||]\n\n#.transactionstabmoduleserverfyrzjvdnxl: fill=#fff\n[<transactionstabmoduleserverfyrzjvdnxl>transactions_tab_module_server||main_table_server()]\n[transactions_tab_module_server]->[main_table_server]\n#.maintableserverahxeyqjztc: fill=#fff\n[<maintableserverahxeyqjztc>main_table_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script><p>Those all can be also done using pipes (<code>%&gt;%</code>) from the <a href="https://cran.r-project.org/package=magrittr">magrittr</a> package:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">paths <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="../reference/src_file.html">src_file</a></span>() <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
@@ -118,34 +117,32 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">pkg.name &lt;-<span class="st"> </span><span class="kw"><a href="../reference/example_package.html">example_package</a></span>()</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt; Downloading GitHub repo strboul/supreme.pkg.test@master</span></a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt;   </span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">   checking <span class="cf">for</span> file ‘<span class="op">/</span>tmp<span class="op">/</span>RtmpsUMcKp<span class="op">/</span>remotes25df79186b7c<span class="op">/</span>strboul<span class="op">-</span>supreme.pkg.test<span class="op">-</span>ae4bc89<span class="op">/</span>DESCRIPTION’ ...</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">   checking <span class="cf">for</span> file ‘<span class="op">/</span>tmp<span class="op">/</span>RtmpndmRA6<span class="op">/</span>remotes37244ec71cb0<span class="op">/</span>strboul<span class="op">-</span>supreme.pkg.test<span class="op">-</span>ae4bc89<span class="op">/</span>DESCRIPTION’ ...</a>
 <a class="sourceLine" id="cb3-5" data-line-number="5">  </a>
-<a class="sourceLine" id="cb3-6" data-line-number="6">✔  checking <span class="cf">for</span> file ‘<span class="op">/</span>tmp<span class="op">/</span>RtmpsUMcKp<span class="op">/</span>remotes25df79186b7c<span class="op">/</span>strboul<span class="op">-</span>supreme.pkg.test<span class="op">-</span>ae4bc89<span class="op">/</span>DESCRIPTION’</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">✔  checking <span class="cf">for</span> file ‘<span class="op">/</span>tmp<span class="op">/</span>RtmpndmRA6<span class="op">/</span>remotes37244ec71cb0<span class="op">/</span>strboul<span class="op">-</span>supreme.pkg.test<span class="op">-</span>ae4bc89<span class="op">/</span>DESCRIPTION’</a>
 <a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; </span></a>
 <a class="sourceLine" id="cb3-8" data-line-number="8">  </a>
 <a class="sourceLine" id="cb3-9" data-line-number="9">─  preparing ‘supreme.pkg.test’<span class="op">:</span></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt;    checking DESCRIPTION meta-information ...</span></a>
 <a class="sourceLine" id="cb3-11" data-line-number="11"><span class="st">  </span></a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="st">   </span>checking DESCRIPTION meta<span class="op">-</span>information ...</a>
-<a class="sourceLine" id="cb3-13" data-line-number="13">  </a>
-<a class="sourceLine" id="cb3-14" data-line-number="14">✔  checking DESCRIPTION meta<span class="op">-</span>information</a>
-<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb3-16" data-line-number="16">  </a>
-<a class="sourceLine" id="cb3-17" data-line-number="17">─  checking <span class="cf">for</span> LF line<span class="op">-</span>endings <span class="cf">in</span> source and make files and shell scripts</a>
-<a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb3-19" data-line-number="19">  </a>
-<a class="sourceLine" id="cb3-20" data-line-number="20">─  checking <span class="cf">for</span> empty or unneeded directories</a>
-<a class="sourceLine" id="cb3-21" data-line-number="21"><span class="co">#&gt; ─  building ‘supreme.pkg.test_0.0.0.9000.tar.gz’</span></a>
-<a class="sourceLine" id="cb3-22" data-line-number="22"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb3-23" data-line-number="23">  </a>
-<a class="sourceLine" id="cb3-24" data-line-number="24">   </a>
-<a class="sourceLine" id="cb3-25" data-line-number="25"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb3-26" data-line-number="26"><span class="co">#&gt; Installing package into '/home/travis/R/Library'</span></a>
-<a class="sourceLine" id="cb3-27" data-line-number="27"><span class="co">#&gt; (as 'lib' is unspecified)</span></a>
-<a class="sourceLine" id="cb3-28" data-line-number="28">sup &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_pkg.html">src_pkg</a></span>(pkg.name))</a>
-<a class="sourceLine" id="cb3-29" data-line-number="29"><span class="kw"><a href="../reference/graph.html">graph</a></span>(sup)</a></code></pre></div>
-<div id="htmlwidget-ffdc26fd55ff42a5bfe1" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ffdc26fd55ff42a5bfe1">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.dotmoduleserverdwrvqkhlox: fill=#fff\n[<dotmoduleserverdwrvqkhlox>.dotModule1_server||]\n\n#.dotmoduleserverkcgubwpemv: fill=#fff\n[<dotmoduleserverkcgubwpemv>.dotModule2_server||]\n\n#.amodulefortableserverbkelmtpcfz: fill=#fff\n[<amodulefortableserverbkelmtpcfz>a_module_for_table_server||]\n\n#.childmoduleserverryizlbnsxf: fill=#fff\n[<childmoduleserverryizlbnsxf>childModule1_server||]\n\n#.moduleaserverdnrptjcvmy: fill=#fff\n[<moduleaserverdnrptjcvmy>moduleA_server||]\n\n#.modulebserverulnhdzfgmj: fill=#fff\n[<modulebserverulnhdzfgmj>moduleB_server||childModule1_server()]\n[moduleB_server]->[childModule1_server]\n#.serverdzkxuanscf: fill=#fff\n[<serverdzkxuanscf>server||moduleA_server(); moduleB_server()]\n[server]->[moduleA_server]\n[server]->[moduleB_server]","svg":false},"evals":[],"jsHooks":[]}</script>
+<a class="sourceLine" id="cb3-12" data-line-number="12">✔  checking DESCRIPTION meta<span class="op">-</span>information</a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">  </a>
+<a class="sourceLine" id="cb3-15" data-line-number="15">─  checking <span class="cf">for</span> LF line<span class="op">-</span>endings <span class="cf">in</span> source and make files and shell scripts</a>
+<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">  </a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">─  checking <span class="cf">for</span> empty or unneeded directories</a>
+<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co">#&gt; ─  building ‘supreme.pkg.test_0.0.0.9000.tar.gz’</span></a>
+<a class="sourceLine" id="cb3-20" data-line-number="20"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb3-21" data-line-number="21">  </a>
+<a class="sourceLine" id="cb3-22" data-line-number="22">   </a>
+<a class="sourceLine" id="cb3-23" data-line-number="23"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb3-24" data-line-number="24"><span class="co">#&gt; Installing package into '/home/travis/R/Library'</span></a>
+<a class="sourceLine" id="cb3-25" data-line-number="25"><span class="co">#&gt; (as 'lib' is unspecified)</span></a>
+<a class="sourceLine" id="cb3-26" data-line-number="26">sup &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_pkg.html">src_pkg</a></span>(pkg.name))</a>
+<a class="sourceLine" id="cb3-27" data-line-number="27"><span class="kw"><a href="../reference/graph.html">graph</a></span>(sup)</a></code></pre></div>
+<div id="htmlwidget-ebf102f8e274b99b489f" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ebf102f8e274b99b489f">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.dotmoduleserverbrxkyosgpm: fill=#fff\n[<dotmoduleserverbrxkyosgpm>.dotModule1_server||]\n\n#.dotmoduleservervsbdhwqule: fill=#fff\n[<dotmoduleservervsbdhwqule>.dotModule2_server||]\n\n#.amodulefortableservertfrbhopqsx: fill=#fff\n[<amodulefortableservertfrbhopqsx>a_module_for_table_server||]\n\n#.childmoduleserverziwqmsdbjt: fill=#fff\n[<childmoduleserverziwqmsdbjt>childModule1_server||]\n\n#.moduleaserverhmrdkinxus: fill=#fff\n[<moduleaserverhmrdkinxus>moduleA_server||]\n\n#.modulebservermxruaivefd: fill=#fff\n[<modulebservermxruaivefd>moduleB_server||childModule1_server()]\n[moduleB_server]->[childModule1_server]\n#.servergrapnxvqku: fill=#fff\n[<servergrapnxvqku>server||moduleA_server(); moduleB_server()]\n[server]->[moduleA_server]\n[server]->[moduleB_server]","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="read-expressions-containing-application" class="section level3">
 <h3 class="hasAnchor">
@@ -186,8 +183,8 @@
 <a class="sourceLine" id="cb4-33" data-line-number="33">})</a>
 <a class="sourceLine" id="cb4-34" data-line-number="34">s &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_expr.html">src_expr</a></span>(e))</a>
 <a class="sourceLine" id="cb4-35" data-line-number="35"><span class="kw"><a href="../reference/graph.html">graph</a></span>(s)</a></code></pre></div>
-<div id="htmlwidget-416165937bd7ff5d84ec" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-416165937bd7ff5d84ec">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.textserverazmuyivnts: fill=#fff\n[<textserverazmuyivnts>text_server||]\n\n#.serverbtmqhwxrdl: fill=#fff\n[<serverbtmqhwxrdl>server||text_server()]\n[server]->[text_server]","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9ba191d7fb7caa51bbfb" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9ba191d7fb7caa51bbfb">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.textserverlzeqhkybws: fill=#fff\n[<textserverlzeqhkybws>text_server||]\n\n#.serverobinfxktvm: fill=#fff\n[<serverobinfxktvm>server||text_server()]\n[server]->[text_server]","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="read-application-environment" class="section level3">
 <h3 class="hasAnchor">
@@ -195,8 +192,8 @@
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">e &lt;-<span class="st"> </span><span class="kw"><a href="../reference/example_environment.html">example_environment</a></span>()</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2">s &lt;-<span class="st"> </span><span class="kw"><a href="../reference/supreme.html">supreme</a></span>(<span class="kw"><a href="../reference/src_env.html">src_env</a></span>(e))</a>
 <a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw"><a href="../reference/graph.html">graph</a></span>(s)</a></code></pre></div>
-<div id="htmlwidget-132a5a7ba81da5d5ab81" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-132a5a7ba81da5d5ab81">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.moduleserverphztuefrvy: fill=#fff\n[<moduleserverphztuefrvy>module1_server||]\n\n#.moduleserverqvakgpwxch: fill=#fff\n[<moduleserverqvakgpwxch>module2_server||]\n\n#.moduleservercsifpkrtvu: fill=#fff\n[<moduleservercsifpkrtvu>module3_server||]\n\n#.moduleaserverjuthbesvcr: fill=#fff\n[<moduleaserverjuthbesvcr>moduleA_server||module1_server(); module2_server(); module3_server()]\n[moduleA_server]->[module1_server]\n[moduleA_server]->[module2_server]\n[moduleA_server]->[module3_server]\n#.serversgkewdprxf: fill=#fff\n[<serversgkewdprxf>server||moduleA_server()]\n[server]->[moduleA_server]","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6e9226350f4c35525be1" style="width:100%;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6e9226350f4c35525be1">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.moduleserverxrkvuaibws: fill=#fff\n[<moduleserverxrkvuaibws>module1_server||]\n\n#.moduleserverqjftoczxgb: fill=#fff\n[<moduleserverqjftoczxgb>module2_server||]\n\n#.moduleserveranuqpgfktm: fill=#fff\n[<moduleserveranuqpgfktm>module3_server||]\n\n#.moduleaserverytdunazise: fill=#fff\n[<moduleaserverytdunazise>moduleA_server||module1_server(); module2_server(); module3_server()]\n[moduleA_server]->[module1_server]\n[moduleA_server]->[module2_server]\n[moduleA_server]->[module3_server]\n#.serverlrtbumdisp: fill=#fff\n[<serverlrtbumdisp>server||moduleA_server()]\n[server]->[moduleA_server]","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="analyse-existing-applications" class="section level2">
@@ -235,8 +232,8 @@
 <a class="sourceLine" id="cb7-4" data-line-number="4"><span class="co">#&gt; 4 entities: server, items_tab_module_server, customers_tab_module_server, transactions_tab_module_server</span></a></code></pre></div>
 <p>Visualize the supreme mode object:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="../reference/graph.html">graph</a></span>(obj)</a></code></pre></div>
-<div id="htmlwidget-1a7b417d19b36e548392" style="width:100%;height:672px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1a7b417d19b36e548392">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.serverzuqfjxnsbl: fill=#fff\n[<serverzuqfjxnsbl>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.itemstabmoduleserverltvwyaxbcz: fill=#fff\n[<itemstabmoduleserverltvwyaxbcz>items_tab_module_server||]\n\n#.customerstabmoduleserverznlhkdfpye: fill=#fff\n[<customerstabmoduleserverznlhkdfpye>customers_tab_module_server||]\n\n#.transactionstabmoduleserverwoycjbigul: fill=#fff\n[<transactionstabmoduleserverwoycjbigul>transactions_tab_module_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1938a3e73d5943b0dfc3" style="width:100%;height:672px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1938a3e73d5943b0dfc3">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n#font: Arial\n#fontSize: 11\n#padding: 8\n\n#.serverqumzgdlcin: fill=#fff\n[<serverqumzgdlcin>server||items_tab_module_server(); customers_tab_module_server(); transactions_tab_module_server()]\n[server]->[items_tab_module_server]\n[server]->[customers_tab_module_server]\n[server]->[transactions_tab_module_server]\n#.itemstabmoduleserverwfhioarvte: fill=#fff\n[<itemstabmoduleserverwfhioarvte>items_tab_module_server||]\n\n#.customerstabmoduleserverarhjzbwxgk: fill=#fff\n[<customerstabmoduleserverarhjzbwxgk>customers_tab_module_server||]\n\n#.transactionstabmoduleserverswzmpxknhd: fill=#fff\n[<transactionstabmoduleserverswzmpxknhd>transactions_tab_module_server||]\n","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="model-language" class="section level2">
