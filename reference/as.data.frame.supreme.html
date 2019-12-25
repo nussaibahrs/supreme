@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Turn supreme data into a data frame — as.data.frame.supreme • supreme</title>
+<title>Turn supreme data into a <code>data.frame</code> — as.data.frame.supreme • supreme</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Turn supreme data into a data frame — as.data.frame.supreme" />
-<meta property="og:description" content="Turn supreme data into a data frame" />
+<meta property="og:title" content="Turn supreme data into a <code>data.frame</code> — as.data.frame.supreme" />
+<meta property="og:description" content="Turn supreme data into a data.frame" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,13 +103,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Turn supreme data into a data frame</h1>
+    <h1>Turn supreme data into a <code>data.frame</code></h1>
     
     <div class="hidden name"><code>as.data.frame.supreme.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Turn supreme data into a data frame</p>
+    <p>Turn supreme data into a <code>data.frame</code></p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for supreme</span>
@@ -130,11 +130,26 @@
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='no'>paths</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='example_app_path.html'>example_app_path</a></span>()
-<span class='no'>Object</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='supreme.html'>supreme</a></span>(<span class='fu'><a href='src_file.html'>src_file</a></span>(<span class='no'>paths</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='no'>Object</span>)
-}</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>paths</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='example_app_path.html'>example_app_path</a></span>()
+<span class='no'>sp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='supreme.html'>supreme</a></span>(<span class='fu'><a href='src_file.html'>src_file</a></span>(<span class='no'>paths</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='no'>sp</span>)</div><div class='output co'>#&gt;                             name                 input
+#&gt; 1                         server                    NA
+#&gt; 2    customers_tab_module_server        customers_list
+#&gt; 3        items_tab_module_server  items_list, is_fired
+#&gt; 4 transactions_tab_module_server table, button_clicked
+#&gt; 5            module_modal_dialog                  text
+#&gt;                                       output            return calling_modules
+#&gt; 1                                         NA              &lt;NA&gt;    list(ite....
+#&gt; 2 paid_customers_table, free_customers_table              &lt;NA&gt;              NA
+#&gt; 3                                         NA              &lt;NA&gt;    list(mod....
+#&gt; 4                         transactions_table transactions_keys              NA
+#&gt; 5                                         NA              &lt;NA&gt;              NA
+#&gt;                     src
+#&gt; 1                 app.R
+#&gt; 2    module-customers.R
+#&gt; 3        module-items.R
+#&gt; 4 module-transactions.R
+#&gt; 5        module-utils.R</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
