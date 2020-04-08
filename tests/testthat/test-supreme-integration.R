@@ -6,6 +6,7 @@ module_output <- file.path("integration-data", "module-output.Rtest")
 multiple_server_definition <- file.path("integration-data", "multiple-server-definition.Rtest")
 server_exprs_elems <- file.path("integration-data", "server-exprs-elems.Rtest")
 without_any_calling_module <- file.path("integration-data", "without-any-calling-module.Rtest")
+without_server <- file.path("integration-data", "without-server.Rtest")
 
 ## src_yaml
 cycle_modules <- file.path("integration-data", "cycle-modules.yaml")
@@ -177,6 +178,14 @@ test_that("supreme error", {
   expect_error(
     supreme(1),
     "[supreme] the provided input cannot be turned into a supreme object",
+    fixed = TRUE
+  )
+})
+
+test_that("file without server symbol", {
+  expect_error(
+    src_file(without_server),
+    "[supreme] the source object cannot be built without the `server`",
     fixed = TRUE
   )
 })

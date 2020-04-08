@@ -54,9 +54,19 @@ entity_constructor <- function(x) {
       res[[length(res) + 1L]] <- out
     }
   }
+
   res <- structure(res, class = "supreme_entity_constructor")
+  check_if_server_symbol_exists(res)
   check_duplicate_module_names(res)
   res
+}
+
+
+check_if_server_symbol_exists <- function(x) {
+  stopifnot(is_supreme_entity_constructor(x))
+  if (!any(sapply(x, `[[`, "name") %in% "server")) {
+    ncstopf("the source object cannot be built without the `server`")
+  }
 }
 
 

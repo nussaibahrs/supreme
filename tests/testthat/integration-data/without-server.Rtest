@@ -1,0 +1,7 @@
+
+ui <- function()
+
+module <- function(input, output, session) {}
+
+# no server
+# server <- function(input, output, session) {}
