@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">supreme</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0</span>
       </span>
     </div>
 
@@ -132,14 +132,16 @@
     </tr>
     <tr>
       <th>fields</th>
-      <td><p>optional. name of the fields to include in the graph. By default, the required
-fields such as the "name" field always visible. There are no ways to exclude
-the required fields. This parameter is set to <code>NULL</code> as default.</p></td>
+      <td><p>optional. name of the fields to include in the graph. The
+possible values can be found at <code><a href='https://rdrr.io/r/base/options.html'>getOption("SUPREME_MODEL_REQUIRED_FIELDS")</a></code>
+and <code><a href='https://rdrr.io/r/base/options.html'>getOption("SUPREME_MODEL_OPTIONAL_FIELDS")</a></code>. By default, the required
+fields such as the "name" field always visible. There are no ways to
+exclude the required fields. This parameter is set to <code>NULL</code> as default.</p></td>
     </tr>
     <tr>
       <th>styles</th>
-      <td><p>optional. a named list to apply custom styles on the graph nodes. A full list
-of the available styles can be seen from:
+      <td><p>optional. a named list to apply custom styles on the graph
+nodes. A full list of the available styles can be seen from:
 <a href='https://github.com/skanaar/nomnoml#custom-classifier-styles'>nomnoml: Custom classifier styles</a></p></td>
     </tr>
     <tr>
@@ -150,6 +152,9 @@ of the available options can be seen from:
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>a <code>supreme</code> graph.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The graph call uses the <code>nomnoml</code> tool to draw a UML diagram of the Shiny
@@ -159,27 +164,28 @@ application.</p>
     <p><a href='https://github.com/skanaar/nomnoml'>nomnoml: The sassy UML diagram renderer</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>path</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='example_yaml.html'>example_yaml</a></span>()
+    <pre class="examples"><div class='input'><span class='co'># create a graph:</span>
+<span class='no'>path</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='example_yaml.html'>example_yaml</a></span>()
 <span class='no'>sp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='supreme.html'>supreme</a></span>(<span class='fu'><a href='src_yaml.html'>src_yaml</a></span>(<span class='no'>path</span>))
 <span class='fu'>graph</span>(<span class='no'>sp</span>)
 
-<span class='co'>## Filter fields, only return the certain fields in the graph entities:</span>
+<span class='co'># filter fields, only return the certain fields in the graph entities:</span>
 <span class='fu'>graph</span>(<span class='no'>sp</span>, <span class='kw'>fields</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"input"</span>, <span class='st'>"return"</span>))
 
-<span class='co'>## Style entites:</span>
+<span class='co'># style entites:</span>
 <span class='fu'>graph</span>(<span class='no'>sp</span>, <span class='kw'>styles</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
  <span class='st'>"server"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"#ff0"</span>, <span class='st'>"underline"</span>, <span class='st'>"bold"</span>),
  <span class='st'>"module_modal_dialog"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"lightblue"</span>, <span class='st'>"dashed"</span>, <span class='kw'>visual</span> <span class='kw'>=</span> <span class='st'>"note"</span>)
 ))
 
-<span class='co'># Style entities having a word "tab" in it:</span>
+<span class='co'># style entities having a word "tab" in it:</span>
 <span class='no'>sp_df</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='no'>sp</span>) <span class='co'># turn supreme object to data.frame</span>
 <span class='no'>tab_modules</span> <span class='kw'>&lt;-</span> <span class='no'>sp_df</span>$<span class='no'>name</span>[<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(<span class='st'>"_tab_"</span>, <span class='no'>sp_df</span>$<span class='no'>name</span>)]
 <span class='no'>styles</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq_along</a></span>(<span class='no'>tab_modules</span>), <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"orange"</span>))
 <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>styles</span>) <span class='kw'>&lt;-</span> <span class='no'>tab_modules</span>
 <span class='fu'>graph</span>(<span class='no'>sp</span>, <span class='kw'>styles</span> <span class='kw'>=</span> <span class='no'>styles</span>)
 
-<span class='co'>## Set graph options:</span>
+<span class='co'># set graph options:</span>
 <span class='fu'>graph</span>(<span class='no'>sp</span>, <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
   <span class='kw'>direction</span> <span class='kw'>=</span> <span class='st'>"right"</span>,
   <span class='kw'>fontSize</span> <span class='kw'>=</span> <span class='fl'>10</span>,
