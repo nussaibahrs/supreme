@@ -11,6 +11,7 @@ NULL
 #'
 #' @rdname objcheck
 #' @noRd
+#' @export
 is_list <- function(x) {
   is.list(x) && !is.data.frame(x)
 }

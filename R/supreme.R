@@ -46,11 +46,10 @@ print.supreme <- function(x, ...) {
   invisible(NULL)
 }
 
-
+#' @export
 is_supreme <- function(x) {
   inherits(x, "supreme")
 }
-
 
 is_source_object <- function(x) {
   inherits(x, "supreme_src_obj")

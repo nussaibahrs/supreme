@@ -15,7 +15,7 @@ ncstopf <- function(..., single.line = FALSE) {
 
 
 #' Paste by separating new lines
-#' @noRd
+#' @export
 pasten <- function(...) paste(..., sep = "\n")
 
 

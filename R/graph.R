@@ -115,6 +115,8 @@ graph_create_node <- function(x, classifier = NULL, centre = TRUE) {
     x[["name"]]
   )
 
+  if(!is.null(x[["input"]]))x[["input"]] <- gsub(".*::", "", x[["input"]])
+
   node$input <- .node_create_multi_vars_field(x[["input"]], bullet = "triangular")
   node$output <- .node_create_multi_vars_field(x[["output"]], bullet = "circle")
   node$return <- .node_create_multi_vars_field(x[["return"]], bullet = "square")
@@ -175,12 +177,24 @@ graph_create_edge <- function(x) {
   .edge_generate_string_edge(edge)
 }
 
+graph_create_edge2 <- function(x) {
+  if (length(grep("::", x[["input"]])) == 0) return(NULL)
 
-.edge_generate_string_edge <- function(edge) {
+  tmp <- strsplit( x[["input"]], "::")
+
+  edge <- list()
+  edge$calling_modules <- x[["name"]]
+  ## sapply->vapply failed because sometimes names are NULL
+  edge$name <- unlist(lapply(tmp, `[[`, 1))
+  .edge_generate_string_edge(edge, pointer = "depends -->")
+}
+
+
+.edge_generate_string_edge <- function(edge, pointer="->") {
   paste(
     paste0(
       "[", edge$name, "]",
-      "->",
+      pointer,
       "[", edge$calling_modules, "]"
     ),
     collapse = "\n"
@@ -266,6 +280,7 @@ graph_constructor <- function(x, fields, styles, options) {
       graph_create_node(entity, custom_classifier_name)
     }
     out$edge <- graph_create_edge(entity)
+    out$edge <- paste(out$edge, graph_create_edge2(entity),sep="\n")
 
     paste(out$comment,
           out$classifier,
