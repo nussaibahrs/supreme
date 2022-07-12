@@ -115,8 +115,6 @@ graph_create_node <- function(x, classifier = NULL, centre = TRUE) {
     x[["name"]]
   )
 
-  if(!is.null(x[["input"]]))x[["input"]] <- gsub(".*::", "", x[["input"]])
-
   node$input <- .node_create_multi_vars_field(x[["input"]], bullet = "triangular")
   node$output <- .node_create_multi_vars_field(x[["output"]], bullet = "circle")
   node$return <- .node_create_multi_vars_field(x[["return"]], bullet = "square")
@@ -125,6 +123,8 @@ graph_create_node <- function(x, classifier = NULL, centre = TRUE) {
     calling_modules = x[["calling_modules"]],
     centre = centre
   )
+
+  node$scr <- .node_create_multi_vars_field(x$src, bullet = "star")
 
   .node_generate_string_node(node)
 }
@@ -178,14 +178,11 @@ graph_create_edge <- function(x) {
 }
 
 graph_create_edge2 <- function(x) {
-  if (length(grep("::", x[["input"]])) == 0) return(NULL)
-
-  tmp <- strsplit( x[["input"]], "::")
-
+  if (is.null(x[["dependency"]])) return(NULL)
   edge <- list()
-  edge$calling_modules <- x[["name"]]
+  edge$name <- x[["name"]]
   ## sapply->vapply failed because sometimes names are NULL
-  edge$name <- unlist(lapply(tmp, `[[`, 1))
+  edge$calling_modules <- x[["dependency"]]
   .edge_generate_string_edge(edge, pointer = "depends -->")
 }
 
